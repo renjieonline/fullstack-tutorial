@@ -1,0 +1,12 @@
+<div class="controls">
+  <i class="fas fa-play" (click)="play()"></i>
+  <i class="fas fa-pause" (click)="pause()"></i>
+  <i class="fas fa-volume-up" (click)="volumeUp()"></i>
+  <i class="fas fa-volume-down" (click)="volumeDown()"></i>
+  <i class="fas fa-stop" (click)="replay()"></i>
+  <i class="fas fa-volume-mute" (click)="toggleMute()"></i>
+  <i class="fas fa-thumbs-up" (click)="like()">{{currentVideo.likes}}</i>
+  <i class="fas fa-thumbs-down" (click)="unlike()">{{currentVideo.unlikes}}</i>
+  <br>
+  <progress #progressBar [value]="currentProgress" max="100"></progress>
+</div>

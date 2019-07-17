@@ -1,0 +1,8 @@
+.controls i {
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.controls progress {
+  width: 100%;
+}

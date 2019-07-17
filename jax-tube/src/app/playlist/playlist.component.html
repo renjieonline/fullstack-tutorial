@@ -1,0 +1,6 @@
+<div class="playlist col-lg-4 col-md-12">
+  <div draggable class="playlist-item" *ngFor="let video of videos">
+    <i class="fas fa-play" (click)="playVideo(video)"></i>
+    <span>{{ video.title }}</span>
+  </div>
+</div>

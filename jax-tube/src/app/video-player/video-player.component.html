@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-lg-8 col-md-12">
+    <app-player
+      #player
+      [currentVideo]="currentVideo"
+      (onUpdateProgressBar)="updateProgressBar()"
+    >
+    </app-player>
+    <app-controls
+      #controls
+      [currentVideo]="currentVideo"
+      [currentProgress]="currentProgress"
+      (onPlay)="play()"
+      (onPause)="pause()"
+      (onVolumeUp)="volumeUp()"
+      (onVolumeDown)="volumeDown()"
+      (onReplay)="replay()"
+      (onToggleMute)="toggleMute()"
+      (onLike)="like()"
+      (onUnlike)="unlike()">
+    </app-controls>
+  </div>
+  <div class="playlist col-lg-4 col-md-12">
+    <app-playlist [videos]="videos" (onPlayVideo)="playVideo($event)">
+    </app-playlist>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div id="add-video">
+  <form>
+    <div class="form-group row">
+      <label for="title" class="col-sm-3 col-form-label">Title:</label>
+      <input type="text" class="form-control col-sm-9" placeholder="Enter title" name="title" [(ngModel)]="video.title">
+    </div>
+    <div class="form-group row">
+      <label for="url" class="col-sm-3 col-form-label">Youtube URL:</label>
+      <input type="url" class="form-control col-sm-9" placeholder="Enter URL" name="url" [(ngModel)]="video.url">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addVideo(video)">Add Video</button>
+  </form>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Title</th>
+        <th scope="col">URL</th>
+        <th scope="col">Operation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let video of videos; let i=index">
+        <th scope="row">{{i + 1}}</th>
+        <td>
+          <span *ngIf="video.id !== editedVideo.id">{{video.title}}</span>
+          <input *ngIf="video.id === editedVideo.id" type="text" class="form-control col-sm-9" name="title" [(ngModel)]="video.title">
+        </td>
+        <td>
+          <span *ngIf="video.id !== editedVideo.id">{{video.url}}</span>
+          <input *ngIf="video.id === editedVideo.id" type="text" class="form-control col-sm-9" name="url" [(ngModel)]="video.url">
+        </td>
+        <td>
+          <button *ngIf="video.id !== editedVideo.id" type="button" class="btn btn-primary btn-sm" (click)="handleEdit(video)">Edit</button>
+          <button *ngIf="video.id === editedVideo.id" type="button" class="btn btn-primary btn-sm" (click)="saveVideo(video, i)">Save</button>
+          <button type="button" class="btn btn-primary btn-sm" (click)="deleteVideo(video.id, i)">Delete</button>
+          <button type="button" class="btn btn-success btn-sm" (click)="handleApprove(video, i)" [disabled]="video.approved === 1">Approve</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

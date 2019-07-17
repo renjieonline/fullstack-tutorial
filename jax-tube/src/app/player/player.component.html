@@ -1,0 +1,6 @@
+<div>
+  <video #player width="100%" height="80%" preload (timeupdate)="updateProgressBar()">
+    <source *ngIf="currentVideo.url" [src]="currentVideo.url" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
