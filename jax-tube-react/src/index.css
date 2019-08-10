@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.title {
+  text-align: center;
+  color: #EEE;
+}
+.video-container {
+  padding: 10px;
+  margin: 0 20px;
+}
+.video-player {
+  background: black;
+  height: 90%;
+}
+
+.controls svg {
+  margin-left: 40px;
+  color: #EEE;
+  cursor: pointer;
+}
+
+.controls span {
+  color: #EEE;
+}
+
+.controls progress {
+  width: 100%;
+  /* background: #EEE; */
+}
+
+.controls progress::-webkit-progress-bar{     
+  background-color: red;
+  border-radius: 0.2rem;
+}
+
+.add-video {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.add-video .form-group {
+  width: 50%;
+}
+
+.add-video td button {
+  margin-right: 10px;
+}
