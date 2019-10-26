@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.bootcss.com/font-awesome/5.10.0-11/css/all.min.css" rel="stylesheet">
+    <link href='jax-tube.css' rel='stylesheet' />
+    <!-- <script src="https://kit.fontawesome.com/93b9f869bb.js"></script> -->
+    <title>JaxTube </title>
+  </head>
+  <body>
+    <h1>JaxTube</h1>
+    <div class="container-fluid">
+        <!-- http://img.sd235.com/2018/ib/view/1468_0d1f034db9dee0e039a14cede68741bd.mp4 -->
+        <!-- http://img.sd235.com/2018/ib/view/1465_0285dea0de3b7188fbe6287994027179.mp4 -->
+        <!-- http://img.sd235.com/2018/ib/view/161815_b203194b5817bb875054fce954b50762.mp4 -->
+        <!-- http://img.sd235.com/2018/ib/view/1511_666cf3b4b79346bed4e96cb15a872303.mp4 -->
+        <!-- http://img.sd235.com/2018/ib/view/1860_ff7eb8f78c89b7964f0fc29ae40fdb62.mp4 -->
+      <div id="jax-tube"  class="row">
+        <div class="col-lg-8 col-md-12">
+          <video id="my-video" width="100%" height="80%" preload ontimeupdate="updateProgressBar()">
+            <source src="http://img.sd235.com/2018/ib/view/1469_2be10e9d23a9b2c73f2799ab02888836.mp4" type="video/mp4" />
+          </video>
+          <div>
+            <br>
+            <i class="fas fa-play" onclick="play()"></i>
+            <i class="fas fa-pause" onclick="pause()"></i>
+            <i class="fas fa-volume-up" onclick="volumeUp()"></i>
+            <i class="fas fa-volume-down" onclick="volumeDown()"></i>
+            <i class="fas fa-stop" onclick="replay()"></i>
+            <i class="fas fa-volume-mute" onclick="toggleMute()"></i>
+            <i class="fas fa-thumbs-up" onclick="like()"></i>
+            <i class="fas fa-thumbs-down" onclick="dislike()"></i>
+            <progress value="0" max="100"></progress>
+          </div>
+        </div>
+        <div class="playlist col-lg-4 col-md-12" onclick="switchVideo()">
+          <div>
+            <i class="fas fa-play"></i>
+            <span>Introduction to HTML5</span>
+          </div>
+          <div>
+              <i class="fas fa-play"></i>
+              <span>Introduction to Styling with CSS3</span>
+          </div>
+          <div>
+              <i class="fas fa-play"></i>
+              <span>Introduction to Bootstrap 4</span>
+          </div>
+          <div>
+              <i class="fas fa-play"></i>
+              <span>Learn to create website with HTML5, CSS3 and Bootstrap4</span>
+            </div>
+          <div>
+              <i class="fas fa-play"></i>
+              <span>Introduction to Javascript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src='jax-tube.js'></script>
+  </body>
+</html>

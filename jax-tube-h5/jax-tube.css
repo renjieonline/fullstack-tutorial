@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+  box-sizing: content-box;
+}
+h1 {
+  text-align: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#jax-tube {
+  padding: 20px;
+  background: #F5F5F5;
+}
+
+#jax-tube div {
+  padding-left: 40px;
+  background: #C3C3C3;
+}
+
+#jax-tube div progress {
+  display: block;
+  width: calc(100% - 40px);
+}
+
+#jax-tube div i {
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+#jax-tube .playList {
+  margin-top: 20px;
+}
